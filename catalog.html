@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Gllacy-catalog</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -19,15 +20,29 @@
           <li class="catalog-li">
             <a class="active" href="#"><span>Каталог</span></a>
             <ul class="sub-menu">
-              <li class="news">Новинки</li>
-              <li><a class="active" href="catalog.html"><span>Сливочное</span></a></li>
-              <li><a href="#"><span>Щербеты</span></a></li>
-              <li><a href="#"><span>Фруктовый лед</span></a></li>
-              <li><a href="#"><span>Мелорин</span></a></li>
+              <li class="news">
+                Новинки
+              </li>
+              <li>
+                <a class="active" href="catalog.html"><span>Сливочное</span></a>
+              </li>
+              <li>
+                <a href="#"><span>Щербеты</span></a>
+              </li>
+              <li>
+                <a href="#"><span>Фруктовый лед</span></a>
+              </li>
+              <li>
+                <a href="#"><span>Мелорин</span></a>
+              </li>
             </ul>
           </li>
-          <li><a class="delivery" href="#"><span>Доставка и оплата</span></a></li>
-          <li><a class="about" href="#"><span>О компании</span></a></li>
+          <li>
+            <a class="delivery" href="#"><span>Доставка и оплата</span></a>
+          </li>
+          <li>
+            <a class="about" href="#"><span>О компании</span></a>
+          </li>
         </ul>
       </nav>
       <div class="user-block_wrapper">
@@ -107,12 +122,12 @@
         <form class="search-form" name="search-form" action="search-result.php" method="get">
           <fieldset class="sorting-field">
             <legend>Сортировка:</legend>
-              <select name="sorting">
-                <option value="popularity">по популярности</option>
-                <option value="low-price">сначала недорогие</option>
-                <option value="high-price">сначала дорогие</option>
-                <option value="richness">по жирности</option>
-              </select>
+            <select name="sorting">
+              <option value="popularity">по популярности</option>
+              <option value="low-price">сначала недорогие</option>
+              <option value="high-price">сначала дорогие</option>
+              <option value="richness">по жирности</option>
+            </select>
           </fieldset>
           <fieldset class="price-field">
             <legend>Цена: 100 руб. – 500 руб.</legend>
@@ -129,14 +144,14 @@
           <fieldset class="richness-field">
             <legend>Жирность:</legend>
             <div class="richness-wrapper">
-                <input type="radio" name="radio" value="0%" id="zero" disabled>
-                <label for="zero">0%</label>
-                <input type="radio" name="radio" value="до 10%" id="less-ten" checked>
-                <label for="less-ten">до 10%</label>
-                <input type="radio" name="radio" value="до 30%" id="less-thirty">
-                <label for="less-thirty">до 30%</label>
-                <input type="radio" name="radio" value="выше 30%" id="more-thirty">
-                <label for="more-thirty">выше 30%</label>
+              <input type="radio" name="radio" value="0%" id="zero" disabled>
+              <label for="zero">0%</label>
+              <input type="radio" name="radio" value="до 10%" id="less-ten" checked>
+              <label for="less-ten">до 10%</label>
+              <input type="radio" name="radio" value="до 30%" id="less-thirty">
+              <label for="less-thirty">до 30%</label>
+              <input type="radio" name="radio" value="выше 30%" id="more-thirty">
+              <label for="more-thirty">выше 30%</label>
             </div>
           </fieldset>
           <fieldset class="filler-field">
@@ -162,7 +177,9 @@
           <li class="item first-row">
             <img src="img/item1.jpg" width="267" height="267" alt="">
             <p>310<span>/кг</span></p>
-            <div class="link-item-wrapper"><a class="link-item" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></div>
+            <div class="link-item-wrapper">
+              <a class="link-item" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+            </div>
             <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="item first-row">
@@ -174,7 +191,9 @@
           <li class="item first-row">
             <img src="img/item3.jpg" width="267" height="267" alt="">
             <p>355<span>/кг</span></p>
-            <div class="link-item-wrapper"><a class="link-item" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></div>
+            <div class="link-item-wrapper">
+              <a class="link-item" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+            </div>
             <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="item first-row">
@@ -186,7 +205,9 @@
           <li class="item second-row">
             <img src="img/item5.jpg" width="267" height="267" alt="">
             <p>325<span>/кг</span></p>
-            <div class="link-item-wrapper"><a class="link-item" href="#">Сливочное с брусничным джемом</a></div>
+            <div class="link-item-wrapper">
+              <a class="link-item" href="#">Сливочное с брусничным джемом</a>
+            </div>
             <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="item second-row">
@@ -198,25 +219,33 @@
           <li class="item second-row">
             <img src="img/item7.jpg" width="267" height="267" alt="">
             <p>375<span>/кг</span></p>
-            <div class="link-item-wrapper"><a class="link-item" href="#">Сливочно-лимонное с карамельной присыпкой</a></div>
+            <div class="link-item-wrapper">
+              <a class="link-item" href="#">Сливочно-лимонное с карамельной присыпкой</a>
+            </div>
             <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="item second-row">
             <img src="img/item8.jpg" width="267" height="267" alt="">
             <p>320<span>/кг</span></p>
-            <div class="link-item-wrapper"><a class="link-item" href="#">Сливочное с шоколадной стружкой</a></div>
+            <div class="link-item-wrapper">
+              <a class="link-item" href="#">Сливочное с шоколадной стружкой</a>
+            </div>
             <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="item third-row">
             <img src="img/item9.jpg" width="267" height="267" alt="">
             <p>440<span>/кг</span></p>
-            <div class="link-item-wrapper"><a class="link-item" href="#">Сливочно-ванильное с кусочками шоколада</a></div>
+            <div class="link-item-wrapper">
+              <a class="link-item" href="#">Сливочно-ванильное с кусочками шоколада</a>
+            </div>
             <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="item third-row">
             <img src="img/item10.jpg" width="267" height="267" alt="">
             <p>435<span>/кг</span></p>
-            <div class="link-item-wrapper"><a class="link-item" href="#">Сливочное с ментоловым сиропом</a></div>
+            <div class="link-item-wrapper">
+              <a class="link-item" href="#">Сливочное с ментоловым сиропом</a>
+            </div>
             <a class="btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="item third-row">
