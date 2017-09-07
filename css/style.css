@@ -76,6 +76,7 @@ img {
 }
 
 .container {
+  position: relative;
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -87,9 +88,6 @@ img {
   width: 1200px;
   margin-left: -27px;
   margin-right: -27px;
-  /*
-  background-color: #849d8f;
-  */
 }
 
 .container a {
@@ -359,21 +357,6 @@ img {
   border-radius: 5px;
 }
 
-/*
-.search .text-label-box {
-  position: relative;
-}
-
-.text-label-box label {
-  position: absolute;
-  top: -52px;
-  left: 14px;
-  font: inherit;
-  pointer-events: none;
-  color: rgb(153, 153, 153);
-}
-*/
-
 .user-block input::-webkit-input-placeholder {
   color: rgb(153, 153, 153);
 }
@@ -414,15 +397,6 @@ img {
 .user-block_basket:hover .basket {
   fill: #000;
 }
-
-/*
-.user-block .user-block_entrance,
-.user-block .user-block_basket,
-.user-block .user-block_catalog {
-  padding-bottom: 20px;
-  background-color: red;
-}
-*/
 
 .user-block .login-form {
   position: absolute;
@@ -783,8 +757,6 @@ body > input[type="radio"] {
 .item img {
   position: relative;
   margin-bottom: 8px;
-  border-radius: 50%;
-  overflow: hidden;
 }
 
 .features-item p,
@@ -956,18 +928,6 @@ body > input[type="radio"] {
   border-color: #ffbc9e;
 }
 
-/*
-.blog a::before {
-  position: absolute;
-  content: "";
-  top: 26px;
-  left: 0;
-  width: 280px;
-  height: 60px;
-  background: url("../img/border-bottom.png") 0 0 no-repeat;
-}
-*/
-
 .substrate {
   padding: 5px;
   background: white url("../img/bg-post.svg") 0 0 repeat;
@@ -1054,14 +1014,13 @@ body > input[type="radio"] {
 
 .map {
   position: relative;
-  width: 1200px;
   max-height: 430px;
   font-size: 0;
-  background: url("../img/bg-map.jpg") 0 0 no-repeat;
+  background: url("../img/bg-map.jpg") 50% 0 no-repeat;
 }
 
 .iframe-map {
-   width: 1200px;
+   width: 100%;
    height: 430px;
 }
 
@@ -1136,6 +1095,7 @@ body > input[type="radio"] {
 
 .main-footer {
   display: flex;
+  min-height: 105px;
   justify-content: space-between;
 }
 
@@ -1145,27 +1105,30 @@ body > input[type="radio"] {
 
 .social-btn {
   display: inline-block;
-  width: 38px;
-  height: 38px;
-  margin-right: 7px;
-  border: 3px solid rgba(255, 255, 255, 0.502);
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
   border-radius: 50%;
 }
 
 .social-btn:hover,
 .social-btn:active {
-  border-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7);
+}
+
+.social-btn:active {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7),
+              inset 0px 2px 1px 0px black;
 }
 
 .social-btn:hover .social {
   opacity: 1;
 }
 
-/*
 .social-btn:active .social {
-
+  opacity: 0.7;
 }
-*/
 
 .footer-information {
   padding-top: 34px;
@@ -1250,17 +1213,35 @@ body > input[type="radio"] {
 
 /*modal-window*/
 
+.overlay {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+.overlay-show {
+  display: block;
+}
+
 .modal-window {
   position: fixed;
-  top: 65px;
-  left: 403px;
-  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6;
   width: 478px;
   padding-left: 24px;
   padding-right: 24px;
   border-radius: 10px;
   background-color: rgb(248, 247, 244);
   display: none;
+}
+
+.modal-window-show {
+  display: block;
 }
 
 .modal-window h3 {
@@ -1278,14 +1259,13 @@ body > input[type="radio"] {
   line-height: 24px;
 }
 
-.modal-window-form::before {
+.modal-window button {
   position: absolute;
-  content: "";
-  top: -48px;
-  right: -8px;
-  width: 18px;
-  height: 17px;
-  background: url("../img/cross-big.svg") 0 0 no-repeat;
+  top: 13px;
+  right: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
 .modal-window-form input:not(.btn) {
@@ -1447,6 +1427,7 @@ body > input[type="radio"] {
   right: 0;
   z-index: 1;
   width: 539px;
+  padding: 20px 15px 0px 15px;
   font-size: 13px;
   line-height: 16px;
   color: #323232;
@@ -1466,12 +1447,11 @@ body > input[type="radio"] {
 
 .table-basket {
   position: relative;
-  padding-top: 7px;
-  border-spacing: 20px 20px;
+  border-collapse: collapse;
 }
 
 .table-basket caption {
-  margin-top: 9px;
+  margin-top: 25px;
   font-size: 15px;
   line-height: 18px;
   font-weight: bold;
@@ -1480,61 +1460,78 @@ body > input[type="radio"] {
 }
 
 .table-basket td {
-  height: 34px;
   vertical-align: top;
+  height: 50px;
+  margin: 0;
+  padding: 0;
 }
 
-.weight-cell > span {
+.weight-cell-first > span,
+.weight-cell-second > span {
   color: #999;
 }
 
-.table-basket .name-cell-first,
+button,
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.table-basket .button-cell-first {
+  padding-left: 5px;
+  padding-top: 8px;
+  padding-right: 10px;
+}
+
+.table-basket .button-cell-second {
+  padding-top: 12px;
+  padding-left: 5px;
+  padding-right: 10px;
+}
+
+.table-basket .ice-cream-cell-first {
+  width: 33px;
+  vertical-align: top;
+}
+
+.table-basket .ice-cream-cell-second {
+  width: 33px;
+  padding-top: 3px;
+}
+
+.table-basket .name-cell-first {
+  width: 248px;
+  padding-top: 8px;
+}
+
 .table-basket .name-cell-second {
-  position: relative;
-  width: 285px;
-  padding-left: 67px;
+  width: 248px;
+  padding-top: 12px;
+  padding-left: 15px;
   text-align: left;
 }
 
-.name-cell-first::before,
-.name-cell-second::before {
-  position: absolute;
-  content: "";
-  top: 3px;
-  left: 1px;
-  width: 11px;
-  height: 11px;
-  background: url("../img/cross-small.svg") 0 0 no-repeat;
+.table-basket .weight-cell-first {
+  width: 125px;
+  padding-top: 8px;
 }
 
-.name-cell-first::after {
-  position: absolute;
-  content: "";
-  top: -7px;
-  left: 21px;
-  width: 33px;
-  height: 33px;
-  background: url("../img/ice-cream-small-first.jpg") 0 0 no-repeat;
+.table-basket .weight-cell-second {
+  width: 125px;
+  padding-top: 12px;
 }
 
-.name-cell-second::after {
-  position: absolute;
-  content: "";
-  top: -8px;
-  left: 22px;
-  width: 33px;
-  height: 33px;
-  background: url("../img/ice-cream-small-second.jpg") 0 0 no-repeat;
+.table-basket .price-cell-first {
+  width: 82px;
+  padding-top: 8px;
 }
 
-.table-basket .weight-cell {
-  padding-left: 8px;
-  text-align: center;
-}
-
-.table-basket .price-cell {
-  padding-left: 7px;
-  text-align: center;
+.table-basket .price-cell-second {
+  width: 82px;
+  padding-top: 12px;
 }
 
 .basket-items::before {
@@ -1555,7 +1552,8 @@ body > input[type="radio"] {
   margin-top: 15px;
   margin-bottom: 20px;
   margin-left: auto;
-  margin-right: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: 14px;
   padding-right: 14px;
   border-radius: 20px/24px;
@@ -1759,8 +1757,15 @@ body > input[type="radio"] {
   background-color: rgba(248, 247, 244, 0.2);
 }
 
-.richness-wrapper input[type="radio"] {
-  display: none;
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }
 
 .richness-wrapper input[type="radio"] + label {
@@ -1790,11 +1795,10 @@ body > input[type="radio"] {
   background: url("../img/radio-off-normal.svg") 0 0 no-repeat;
 }
 
-/*
 .richness-wrapper input[type="radio"]:focus + label::before {
-  outline: 5px solid rgb(59, 153, 252);
+  outline: rgb(59, 153, 252) auto 5px;
 }
-*/
+
 .richness-wrapper input[type="radio"]:disabled + label::before {
   background: url("../img/radio-off-disabled.svg") 0 0 no-repeat;
 }
@@ -1848,10 +1852,6 @@ body > input[type="radio"] {
   margin-right: 19px;
 }
 
-.filler-wrapper input[type="checkbox"] {
-  display: none;
-}
-
 .filler-wrapper input[type="checkbox"] + label {
   position: relative;
   padding-left: 30px;
@@ -1865,6 +1865,10 @@ body > input[type="radio"] {
   width: 27px;
   height: 23px;
   background: url("../img/checkbox-off-normal.svg") 0 0 no-repeat;
+}
+
+.filler-wrapper input[type="checkbox"]:focus + label::before {
+  outline: rgb(59, 153, 252) auto 5px;
 }
 
 .filler-wrapper input[type="checkbox"]:disabled + label::before {
@@ -2048,6 +2052,7 @@ body > input[type="radio"] {
 .pagination .prev {
   margin-right: 15px;
   transform: rotate(180deg);
+  cursor: default;
 }
 
 .pagination .next {
