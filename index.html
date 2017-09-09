@@ -5,7 +5,7 @@
     <title>Gllacy</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-min.css" rel="stylesheet">
   </head>
   <body>
     <div class="overlay"></div>
@@ -236,20 +236,23 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#231F20" d="M17.454 1.46L16.04.046 9 7.086 1.96.046.546 1.46l7.04 7.04-7.04 7.04 1.414 1.414L9 9.914l7.04 7.04 1.414-1.414-7.04-7.04z"/></svg>
         </button>
         <form class="modal-window-form" action="https://echo.htmlacademy.ru" method="post">
-          <input type="text" name="name">
-          <div class="text-label-box">
-            <label>Как вас зовут?</label>
+          <input type="text" name="name" id="name-field">
+          <div class="name-label-box">
+            <label for="name-field">Как вас зовут?</label>
           </div>
-          <input type="email" name="email">
+          <input type="email" name="email" id="email-field">
           <div class="email-label-box">
-            <label>Ваша почта для ответа?</label>
+            <label for="email-field">Ваша почта для ответа?</label>
           </div>
-          <textarea name="field" id="text-field">Напишите что-нибудь...</textarea>
+          <textarea name="field" id="text-field"></textarea>
+          <div class="text-label-box">
+            <label for="text-field">Напишите что-нибудь...</label>
+          </div>
           <input class="btn" type="submit" value="Отправить">
         </form>
       </div>
     </div>
-    <script src="js/script.js">
+    <script src="js/script-min.js">
     </script>
   </body>
 </html>

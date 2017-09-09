@@ -1354,7 +1354,8 @@ body > input[type="radio"] {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-.modal-window-form input:hover:not(.btn) {
+.modal-window-form input:hover:not(.btn),
+.modal-window-form textarea:hover {
   padding-top: 8px;
   padding-left: 11px;
   padding-right: 9px;
@@ -1362,7 +1363,8 @@ body > input[type="radio"] {
   border: 2px solid rgb(154, 154, 154);
 }
 
-.modal-window-form input:focus:not(.btn) {
+.modal-window-form input:focus:not(.btn),
+.modal-window-form textarea:focus  {
   padding-top: 8px;
   padding-left: 11px;
   padding-right: 9px;
@@ -1372,30 +1374,39 @@ body > input[type="radio"] {
 }
 
 .modal-window-form .email-label-box,
+.modal-window-form .name-label-box,
 .modal-window-form .text-label-box {
   position: relative;
 }
 
 .email-label-box label,
-.text-label-box label {
+.name-label-box label {
   position: absolute;
-  top: -52px;
+  top: -54px;
   left: 14px;
   font: inherit;
   color: rgb(153, 153, 153);
   pointer-events: none;
 }
 
-.modal-window-form input[type="text"]:focus ~ .text-label-box label,
-.modal-window-form input[type="text"]:valid ~ .text-label-box label,
-.modal-window-form input[type="email"]:focus ~ .email-label-box label,
-.modal-window-form input[type="email"]:valid ~ .email-label-box label {
+.text-label-box label {
+  position: absolute;
+  top: -170px;
+  left: 14px;
+  font: inherit;
+  color: rgb(153, 153, 153);
+  pointer-events: none;
+}
+
+.modal-window-form input[name="name"]:focus ~ .name-label-box label,
+.modal-window-form input[name="email"]:focus ~ .email-label-box label,
+.modal-window-form textarea[name="field"]:focus ~ .text-label-box label {
   font-size: 11px;
   line-height: 13px;
   color: #5b9ddf;
-  -webkit-transform: translateY(-28px);
-      -ms-transform: translateY(-28px);
-          transform: translateY(-28px);
+  -webkit-transform: translateY(-26px);
+      -ms-transform: translateY(-26px);
+          transform: translateY(-26px);
 }
 
 .modal-window-form .btn {
