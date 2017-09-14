@@ -821,7 +821,7 @@ body > input[type="radio"] {
 .catalog-items span::before {
   position: absolute;
   content: "";
-  top: -4px;
+  top: -2px;
   right: 40px;
   width: 31px;
   height: 36px;
@@ -831,7 +831,7 @@ body > input[type="radio"] {
 .features-item span::before {
   position: absolute;
   content: "";
-  top: -4px;
+  top: -2px;
   right: 42px;
   width: 31px;
   height: 36px;
@@ -947,7 +947,6 @@ body > input[type="radio"] {
 
 .blog a {
   position: relative;
-  font: inherit;
   font-size: 24px;
   line-height: 30px;
   font-weight: bold;
