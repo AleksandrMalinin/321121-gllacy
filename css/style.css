@@ -351,6 +351,7 @@ img {
   position: absolute;
   top: 36px;
   right: 0;
+  z-index: 1;
   padding: 20px 15px;
   background-color: rgb(248, 247, 244);
   border-radius: 6px;
